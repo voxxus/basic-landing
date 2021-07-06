@@ -1,0 +1,36 @@
+{
+  "name": "test-landing",
+  "version": "1.0.0",
+  "description": "test task for OpenCode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voxxus/test-landing.git"
+  },
+  "keywords": [
+    "landing",
+    "html",
+    "scss",
+    "bem",
+    "pixel",
+    "perfect"
+  ],
+  "author": "Aleksandr Sukhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voxxus/test-landing/issues"
+  },
+  "homepage": "https://github.com/voxxus/test-landing#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.1"
+  }
+}
