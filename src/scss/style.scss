@@ -1,8 +1,30 @@
-@import "normalize";
-@import "fonts";
-@import "variables";
-@import "mixins";
+@import "base/normalize";
+@import "base/fonts";
+@import "base/variables";
+@import "base/mixins";
 
 * {
 	box-sizing: border-box;
 }
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+h1 {
+	margin: 0;
+}
+
+.container {
+	width: 1135px;
+	margin: 0 auto;
+}
+
+@import "blocks/header";

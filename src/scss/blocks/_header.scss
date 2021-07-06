@@ -1,0 +1,70 @@
+.header {
+	min-height: 109px;
+  padding-top: 30px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	.logo {
+		&__title {
+			@include font("Oswald", 700);
+			font-size: 48px;
+			line-height: 1.2;
+			text-transform: uppercase;
+			color: $color-theme-main;
+		}
+
+		&__subtitle {
+			@include font("PT Serif", 400, italic);
+			font-size: 18px;
+			line-height: 1.5;
+			color: $color-grey;
+			margin-left: 11px;
+		}
+	}
+
+	&-nav {
+		&__menu {
+			display: flex;
+			align-items: center;
+		}
+
+		&__link {
+			display: flex;
+			align-items: center;
+			margin-right: 33px;
+		}
+
+		.link__logo {
+			margin-right: 9px;
+		}
+
+		.link__text {
+			@include font("PT Serif", 400, italic);
+			text-transform: uppercase;
+			font-size: 13px;
+			line-height: 1.2;
+		}
+
+		&__button {
+			width: 191px;
+			height: 45px;
+      background-color: $color-theme-main;
+      border: none;
+      @include font("PT Serif", 400, italic);
+      text-transform: uppercase;
+      font-size: 13px;
+      line-height: 1.2;
+      color: $color-text-white;
+      cursor: pointer;
+		}
+	}
+}
