@@ -1,25 +1,11 @@
 @import "base/normalize";
+@import "base/clear";
 @import "base/fonts";
 @import "base/variables";
 @import "base/mixins";
 
 * {
 	box-sizing: border-box;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-	color: #000;
-}
-
-h1 {
-	margin: 0;
 }
 
 .container {
@@ -29,3 +15,4 @@ h1 {
 
 @import "blocks/header";
 @import "blocks/panel";
+@import "blocks/home";
