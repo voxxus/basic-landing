@@ -22,6 +22,15 @@
 		display: flex;
 		align-items: flex-start;
 		margin-right: 34px;
+		transition: $transition;
+
+		&:hover .header__link-text::after {
+			width: 100%;
+		}
+
+		&:active {
+			opacity: 0.5;
+		}
 	}
 
 	&__link-logo {
@@ -35,6 +44,15 @@
 		line-height: 1.2;
 		color: $color-black;
 		letter-spacing: 0.0001em;
+
+		&::after {
+			content: "";
+			width: 0px;
+			height: 1px;
+			display: block;
+			background: $color-black;
+			transition: $transition;
+		}
 	}
 
 	&__button {
@@ -48,5 +66,15 @@
 		line-height: 1.2;
 		color: $color-bg-white;
 		cursor: pointer;
+		transition: $transition;
+
+		&:hover {
+			color: $color-black;
+		}
+
+		&:active {
+			color: $color-theme-main;
+			background-color: $color-black;
+		}
 	}
 }

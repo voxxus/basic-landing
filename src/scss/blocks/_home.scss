@@ -71,6 +71,11 @@
 
 	&__news-item {
 		max-width: 172px;
+		transition: $transition;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__news-img {

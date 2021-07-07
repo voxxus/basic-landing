@@ -1,0 +1,42 @@
+.scroll {
+	padding: 10px;
+	position: fixed;
+  z-index: 100;
+	right: 16px;
+	bottom: 45px;
+	cursor: pointer;
+  display: none;
+	user-select: none;
+	transition: $transition;
+
+	&:hover {
+		background-color: $color-grey-light;
+	}
+
+	&:active .scroll__icon,
+	&:active .scroll__text {
+		opacity: 0.5;
+	}
+
+	&__icon,
+	&__text {
+		transition: $transition;
+	}
+
+	&__icon {
+		position: relative;
+		bottom: 5px;
+	}
+
+	&__text {
+		@include font("Oswald", 300);
+		margin-left: 1px;
+		font-size: 14px;
+		line-height: 16px;
+		color: $color-black;
+	}
+
+  &--visible {
+    display: block;
+  }
+}

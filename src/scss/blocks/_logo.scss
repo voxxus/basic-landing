@@ -1,6 +1,15 @@
 .logo {
 		display: flex;
 		align-items: flex-end;
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
 
 		&__title {
 			@include font("Oswald", 700);

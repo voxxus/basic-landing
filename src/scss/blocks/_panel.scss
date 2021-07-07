@@ -25,6 +25,7 @@
 		letter-spacing: 0.05em;
 		color: $color-text-white;
 		cursor: pointer;
+		transition: $transition;
 
 		&:nth-child(1),
 		&:nth-child(3) {
@@ -43,9 +44,13 @@
 			padding: 0 16px;
 		}
 
-		&:hover {
-			text-decoration: underline;
-			text-underline-position: under;
+		&:hover .panel__link::after {
+			width: 100%;
+			background: $color-text-white;
+		}
+
+		&:active {
+			opacity: 0.5;
 		}
 
 		&--active {
@@ -55,7 +60,17 @@
 
 	&__link {
 		position: relative;
-		bottom: 1px;
+		bottom: -1px;
+
+		&::after {
+			content: "";
+			width: 0;
+			height: 1px;
+			display: block;
+			margin-top: 2px;
+			background: $color-black;
+			transition: $transition;
+		}
 	}
 
 	&__label {
@@ -63,14 +78,22 @@
 	}
 
 	&__input {
-		width: 269px;
-		height: 40px;
+		position: relative;
+		left: 1px;
+		width: 271px;
+		height: 42px;
 		outline: none;
 		background-color: $color-text-white;
-		border: none;
+		border: 1px solid $color-black;
 		padding: 14px 30px 14px 12px;
 		@include font("Oswald");
 		font-size: 15px;
+		transition: $transition;
+
+		&:focus {
+			box-shadow: 0 0 5px $color-theme-main;
+			border: 1px solid $color-theme-main;
+		}
 
 		&::placeholder {
 			text-transform: uppercase;
@@ -86,6 +109,7 @@
 			background: url("../images/icons/close.png") center (center / cover)
 				no-repeat;
 			opacity: 0.6;
+			transition: $transition;
 
 			&:hover {
 				opacity: 1;
@@ -96,10 +120,11 @@
 	&__input-icon {
 		position: absolute;
 		right: 12px;
-		top: 11px;
+		top: 12px;
 		opacity: 0.6;
 		cursor: pointer;
-		
+		transition: $transition;
+
 		&:hover {
 			opacity: 1;
 		}
