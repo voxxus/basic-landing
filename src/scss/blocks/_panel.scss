@@ -1,5 +1,5 @@
 .panel {
-	min-height: 72px;
+	min-height: $panel-height;
 	background-color: $color-black;
 
 	&__wrapper {
@@ -11,7 +11,7 @@
 	&__menu {
 		display: flex;
 		align-items: center;
-		height: 72px;
+		height: $panel-height;
 	}
 
 	&__item {
@@ -19,21 +19,43 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		padding: 0 21px;
 		@include font("Oswald");
+		font-size: 19px;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		color: $color-text-white;
 		cursor: pointer;
+
+		&:nth-child(1),
+		&:nth-child(3) {
+			padding: 0 17px;
+		}
+
+		&:nth-child(2) {
+			padding: 0 15px;
+		}
+
+		&:nth-child(4) {
+			padding: 0 20px;
+		}
+
+		&:nth-child(5) {
+			padding: 0 16px;
+		}
 
 		&:hover {
 			text-decoration: underline;
 			text-underline-position: under;
 		}
 
-		&-active {
+		&--active {
 			background-color: $color-theme-main;
 		}
+	}
+
+	&__link {
+		position: relative;
+		bottom: 1px;
 	}
 
 	&__label {
@@ -48,7 +70,7 @@
 		border: none;
 		padding: 14px 30px 14px 12px;
 		@include font("Oswald");
-		font-size: 14px;
+		font-size: 15px;
 
 		&::placeholder {
 			text-transform: uppercase;
@@ -60,8 +82,8 @@
 			-webkit-appearance: none;
 			width: 16px;
 			height: 16px;
-      margin-left: 5px;
-			background: url("../../images/icons/close.png") center (center / cover)
+			margin-left: 5px;
+			background: url("../images/icons/close.png") center (center / cover)
 				no-repeat;
 			opacity: 0.6;
 
@@ -73,10 +95,11 @@
 
 	&__input-icon {
 		position: absolute;
-		right: 10px;
+		right: 12px;
 		top: 11px;
 		opacity: 0.6;
 		cursor: pointer;
+		
 		&:hover {
 			opacity: 1;
 		}

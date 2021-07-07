@@ -9,10 +9,11 @@
 }
 
 .container {
-	width: 1135px;
+	width: 1133px;
 	margin: 0 auto;
 }
 
 @import "blocks/header";
+@import "blocks/logo";
 @import "blocks/panel";
 @import "blocks/home";

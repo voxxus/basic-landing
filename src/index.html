@@ -11,24 +11,24 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__wrapper">
-					<div class="header__logo">
+					<a class="logo" href="#">
 						<h1 class="logo__title">Sitename</h1>
 						<div class="logo__subtitle">my first web page</div>
-					</div>
-					<nav class="header-nav">
-						<ul class="header-nav__menu">
-							<li class="header-nav__item">
-								<a href="#" class="header-nav__link">
+					</a>
+					<nav class="header__nav">
+						<ul class="header__menu">
+							<li class="header__item">
+								<a class="header__link" href="#">
 									<img
+										class="header__link-logo"
 										src="images/icons/key.png"
 										alt="key"
-										class="link__logo"
 									/>
-									<div class="link__text">login</div>
+									<div class="header__link-text">login</div>
 								</a>
 							</li>
-							<li class="header-nav__item">
-								<button class="header-nav__button">contact me</button>
+							<li class="header__item">
+								<button class="header__button">contact me</button>
 							</li>
 						</ul>
 					</nav>
@@ -36,32 +36,42 @@
 			</div>
 		</header>
 
-		<section class="panel">
+		<div class="panel">
 			<div class="container">
 				<div class="panel__wrapper">
 					<ul class="panel__menu">
-						<li class="panel__item panel__item-active">home</li>
-						<li class="panel__item">about</li>
-						<li class="panel__item">news</li>
-						<li class="panel__item">portfolio</li>
-						<li class="panel__item">blog</li>
+						<li class="panel__item panel__item--active">
+							<a class="panel__link" href="#">home</a>
+						</li>
+						<li class="panel__item">
+							<a class="panel__link" href="#">about</a>
+						</li>
+						<li class="panel__item">
+							<a class="panel__link" href="#">news</a>
+						</li>
+						<li class="panel__item">
+							<a class="panel__link" href="#">portfolio</a>
+						</li>
+						<li class="panel__item">
+							<a class="panel__link" href="#">blog</a>
+						</li>
 					</ul>
-					<label for="input-search" class="panel__label">
+					<label class="panel__label" for="input-search">
 						<input
+							class="panel__input"
 							type="search"
 							id="input-search"
-							class="panel__input"
 							placeholder="Search"
 						/>
 						<img
+							class="panel__input-icon"
 							src="images/icons/search.png"
 							alt="search"
-							class="panel__input-icon"
 						/>
 					</label>
 				</div>
 			</div>
-		</section>
+		</div>
 
 		<section class="home">
 			<div class="container">
@@ -74,83 +84,108 @@
 					Learning another language can keep your mind sharp. Music lessons
 					increase<br />
 					intelligence. Challenging your beliefs strengthens your mind.
-					Increasing<br />
+					&nbsp;Increasing<br />
 					willpower just takes a little effort each day and it’s more
 					responsible for your<br />
 					success than IQ.
 				</p>
 
 				<div class="home__features">
-					<h3 class="features__title">Key features</h3>
-					<ul class="features__list">
-						<li class="features__item">It will make you happier.</li>
-						<li class="features__item">It will improve your relationships.</li>
-						<li class="features__item">It can make you a better person.</li>
-						<li class="features__item">
-							It can make life better for everyone around you.
+					<h3 class="home__features-title">Key features</h3>
+					<ul class="home__features-list">
+						<li class="home__features-item">
+							<span class="home__features-item-text"
+								>It will make you happier.</span
+							>
+						</li>
+						<li class="home__features-item">
+							<span class="home__features-item-text"
+								>It will improve your relationships.</span
+							>
+						</li>
+						<li class="home__features-item">
+							<span class="home__features-item-text"
+								>It can make you a better person.</span
+							>
+						</li>
+						<li class="home__features-item">
+							<span class="home__features-item-text"
+								>It can make life better for everyone around you.</span
+							>
 						</li>
 					</ul>
 				</div>
 
 				<div class="home__news">
-					<h3 class="news__title">Recent news</h3>
+					<h3 class="home__news-title">Recent news</h3>
 
-					<div class="news__list">
-						<div class="news__item">
+					<div class="home__news-list">
+						<div class="home__news-item">
 							<img
+								class="home__news-img"
 								src="images/news/news_1.jpg"
 								alt="nature"
-								class="item__img"
 							/>
-							<div class="item__description">
+							<div class="home__news-description">
 								Being in nature reduces stress, makes you more creative
 							</div>
 						</div>
 
-						<div class="news__item">
-							<img src="images/news/news_2.jpg" alt="trees" class="item__img" />
-							<div class="item__description">
-								Usability Testing for Mobile Is Easy
+						<div class="home__news-item">
+							<img
+								class="home__news-img"
+								src="images/news/news_2.jpg"
+								alt="trees"
+							/>
+							<div class="home__news-description">
+								Usability Testing for<br />
+								Mobile Is Easy
 							</div>
 						</div>
 
-						<div class="news__item">
+						<div class="home__news-item">
 							<img
+								class="home__news-img"
 								src="images/news/news_3.jpg"
 								alt="building"
-								class="item__img"
 							/>
-							<div class="item__description">
+							<div class="home__news-description">
 								Infinite Scrolling Is Not for Every Website
 							</div>
 						</div>
 
-						<div class="news__item">
+						<div class="home__news-item">
 							<img
+								class="home__news-img"
 								src="images/news/news_4.jpg"
 								alt="mountains"
-								class="item__img"
 							/>
-							<div class="item__description">
+							<div class="home__news-description">
 								Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
 							</div>
 						</div>
 
-						<div class="news__item">
-							<img src="images/news/news_5.jpg" alt="sea" class="item__img" />
-							<div class="item__description">
-								University Websites: Top 10 Design Guidelines
+						<div class="home__news-item">
+							<img
+								class="home__news-img"
+								src="images/news/news_5.jpg"
+								alt="sea"
+							/>
+							<div class="home__news-description">
+								University Websites: Top<br />
+								10 Design Guidelines
 							</div>
 						</div>
 
-						<div class="news__item">
+						<div class="home__news-item">
 							<img
+								class="home__news-img"
 								src="images/news/news_6.jpg"
 								alt="road with trees"
-								class="item__img"
 							/>
-							<div class="item__description">
-								University Websites: Top 10 Design Guidelines
+							<div class="home__news-description">
+								University Websites: Top<br />
+								10 Design Guidelines
 							</div>
 						</div>
 					</div>
