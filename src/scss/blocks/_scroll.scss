@@ -1,11 +1,12 @@
 .scroll {
 	padding: 10px;
 	position: fixed;
-  z-index: 100;
+	z-index: 100;
 	right: 16px;
 	bottom: 45px;
+	border-radius: 10px;
 	cursor: pointer;
-  display: none;
+	display: none;
 	user-select: none;
 	transition: $transition;
 
@@ -36,7 +37,7 @@
 		color: $color-black;
 	}
 
-  &--visible {
-    display: block;
-  }
+	&--visible {
+		display: block;
+	}
 }

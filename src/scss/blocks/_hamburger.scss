@@ -1,0 +1,45 @@
+.hamburger {
+	display: none;
+
+	@media (max-width: $screen-sm) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 26px;
+		height: 20px;
+	}
+
+	&__line {
+		@media (max-width: $screen-sm) {
+			display: block;
+			height: 2px;
+			width: 100%;
+			background-color: $color-text-white;
+			transition: $transition;
+		}
+	}
+
+	&--active {
+		.hamburger__line {
+			margin-bottom: -2px;
+		}
+
+		.hamburger__line:nth-child(1) {
+			@media (max-width: $screen-sm) {
+				transform: translateY(10px) rotate(-45deg);
+			}
+		}
+
+		.hamburger__line:nth-child(2) {
+			@media (max-width: $screen-sm) {
+				display: none;
+			}
+		}
+
+		.hamburger__line:nth-child(3) {
+			@media (max-width: $screen-sm) {
+				transform: translateY(-10px) rotate(45deg);
+			}
+		}
+	}
+}

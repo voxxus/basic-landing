@@ -9,11 +9,31 @@
 }
 
 .container {
-	width: 1133px;
+	max-width: 1193px;
+	padding: 0 30px;
 	margin: 0 auto;
 }
 
+@media (max-width: $screen-xl) {
+	.container {
+		max-width: 970px;
+	}
+}
+
+@media (max-width: $screen-lg) {
+	.container {
+		max-width: 750px;
+	}
+}
+
+@media (max-width: $screen-md) {
+	.container {
+		max-width: none;
+	}
+}
+
 @import "blocks/header";
+@import "blocks/hamburger";
 @import "blocks/logo";
 @import "blocks/panel";
 @import "blocks/home";

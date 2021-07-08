@@ -1,17 +1,40 @@
 .panel {
 	min-height: $panel-height;
 	background-color: $color-black;
+	position: relative;
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media (max-width: $screen-sm) {
+			height: $panel-height;
+		}
 	}
 
 	&__menu {
 		display: flex;
 		align-items: center;
 		height: $panel-height;
+
+		@media (max-width: $screen-sm) {
+			position: absolute;
+			width: 100%;
+			height: 55px;
+			opacity: 0;
+			left: 0;
+			top: $panel-height;
+			background-color: $color-black;
+			justify-content: space-between;
+			transition: $transition;
+		}
+
+		&--active {
+			@media (max-width: $screen-sm) {
+				opacity: 1;
+			}
+		}
 	}
 
 	&__item {
@@ -26,6 +49,10 @@
 		color: $color-text-white;
 		cursor: pointer;
 		transition: $transition;
+
+		@media (max-width: $screen-sm) {
+			font-size: 14px;
+		}
 
 		&:nth-child(1),
 		&:nth-child(3) {
@@ -42,6 +69,17 @@
 
 		&:nth-child(5) {
 			padding: 0 16px;
+		}
+
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(6) {
+			@media (max-width: $screen-md) {
+				padding: 0 10px;
+			}
 		}
 
 		&:hover .panel__link::after {
@@ -89,6 +127,12 @@
 		@include font("Oswald");
 		font-size: 15px;
 		transition: $transition;
+
+		@media (max-width: $screen-lg) {
+			width: initial;
+			min-width: 191px;
+			max-width: 271px;
+		}
 
 		&:focus {
 			box-shadow: 0 0 5px $color-theme-main;

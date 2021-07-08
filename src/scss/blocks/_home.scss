@@ -9,6 +9,21 @@
 		font-size: 53px;
 		letter-spacing: -1.017px;
 		color: $color-black;
+
+		@media (max-width: $screen-lg) {
+			font-size: 40px;
+		}
+
+		@media (max-width: $screen-md) {
+			font-size: 30px;
+			line-height: 45px;
+		}
+
+		br {
+			@media (max-width: $screen-sm) {
+				display: none;
+			}
+		}
 	}
 
 	&__description {
@@ -17,6 +32,23 @@
 		font-size: 24px;
 		line-height: 36px;
 		color: $color-black;
+
+		@media (max-width: $screen-lg) {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		@media (max-width: $screen-md) {
+			font-size: 18px;
+			line-height: 26px;
+			max-width: 90vw;
+		}
+
+		br {
+			@media (max-width: $screen-md) {
+				display: none;
+			}
+		}
 	}
 
 	&__features {
@@ -67,11 +99,24 @@
 		margin: 17px 0 0 1px;
 		display: flex;
 		justify-content: space-between;
+
+		@media (max-width: $screen-xl) {
+			flex-wrap: wrap;
+			align-content: flex-start;
+		}
+
+		@media (max-width: $screen-sm) {
+			justify-content: center;
+		}
 	}
 
 	&__news-item {
 		max-width: 172px;
 		transition: $transition;
+
+		@media (max-width: $screen-xl) {
+			margin: 0 20px 15px 0;
+		}
 
 		&:hover {
 			text-decoration: underline;
